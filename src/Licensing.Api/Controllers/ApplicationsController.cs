@@ -98,8 +98,6 @@ public sealed class ApplicationsController(LicensingDbContext db, TimeProvider t
                 detail: $"Cannot approve an application in status '{application.Status}'.");
 
         application.Approve(reviewerId ?? "unknown-reviewer", timeProvider.GetUtcNow());
-
-        application.Approve(reviewerId ?? "unknown-reviewer", timeProvider.GetUtcNow()); // throws on invalid state → 409
         await db.SaveChangesAsync(ct);
 
         return Ok(ToStatusResponse(application));
@@ -121,8 +119,6 @@ public sealed class ApplicationsController(LicensingDbContext db, TimeProvider t
                 statusCode: StatusCodes.Status409Conflict,
                 title: "Invalid state transition",
                 detail: $"Cannot reject an application in status '{application.Status}'.");
-
-        application.Reject(reviewerId ?? "unknown-reviewer", request?.Reason, timeProvider.GetUtcNow());
 
         application.Reject(reviewerId ?? "unknown-reviewer", request?.Reason, timeProvider.GetUtcNow());
         await db.SaveChangesAsync(ct);

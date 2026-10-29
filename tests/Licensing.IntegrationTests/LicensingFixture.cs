@@ -45,10 +45,7 @@ public sealed class LicensingFixture : IAsyncLifetime
         var workerBuilder = Host.CreateApplicationBuilder();
         workerBuilder.Configuration.AddInMemoryCollection(settings);
         workerBuilder.Services.AddWorker(workerBuilder.Configuration);
-
-        workerBuilder.Services.AddWorker(workerBuilder.Configuration);
         workerBuilder.Services.AddSingleton<IPhotoQualityAnalyzer>(new FixedPhotoQualityAnalyzer(0.9));
-
         workerBuilder.Services.Configure<MassTransitHostOptions>(o => o.WaitUntilStarted = true);
 
         _worker = workerBuilder.Build();
