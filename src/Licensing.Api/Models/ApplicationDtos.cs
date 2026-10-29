@@ -1,6 +1,6 @@
 using Licensing.Domain.Applications;
 
-namespace Licensing.Api.Endpoints;
+namespace Licensing.Api.Models;
 
 public sealed class SubmitApplicationRequest
 {

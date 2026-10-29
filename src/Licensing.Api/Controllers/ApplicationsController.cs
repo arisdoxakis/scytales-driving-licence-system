@@ -1,4 +1,4 @@
-using Licensing.Api.Endpoints;
+using Licensing.Api.Models;
 using Licensing.Contracts;
 using Licensing.Domain.Applications;
 using Licensing.Infrastructure.Persistence;

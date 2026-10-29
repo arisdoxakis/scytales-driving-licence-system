@@ -1,5 +1,4 @@
 using System.Text.Json.Serialization;
-using Licensing.Api;
 using Licensing.Infrastructure;
 using Licensing.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;

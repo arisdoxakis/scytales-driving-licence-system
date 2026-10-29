@@ -2,9 +2,8 @@ using System.Net;
 using System.Net.Http.Json;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using Licensing.Api.Endpoints;
+using Licensing.Api.Models;
 using Licensing.Domain.Applications;
-using Licensing.Domain.Rules;
 
 namespace Licensing.IntegrationTests;
 
