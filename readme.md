@@ -244,9 +244,3 @@ Many fast unit tests cover the logic; a few slower integration tests cover the w
 - **MassTransit licensing:** plan the v9 licence or an alternative before v8 support ends.
 
 ---
-
-## AI usage
-
-I used an AI assistant (Claude) throughout the assignment as a design partner and for code drafts. It helped me break down the requirements, compare options (state machine approaches, outbox vs. publish-after-save, controllers vs. minimal APIs), and draft the domain model, tests, infrastructure and this README.
-
-I built the project myself step by step: creating the projects, writing and adapting the code, running every flow locally, and making the final design decisions. I reviewed all generated code, fixed the issues that came up while building and running it, and can explain every part of the design.
